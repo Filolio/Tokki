@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokki.MainPage">
+
+    <RelativeLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid HorizontalOptions="FillAndExpand">
+            <Image x:Name="Image_background" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Grid x:Name ="Stack_main_menu" IsVisible="true"  HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout>
+
+
+                    <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Start"  FontSize="30" TextColor="Black"/>
+                    <Button Text="Breath" TextColor="Black" x:Name="Breath" Clicked="game_breath_Click" HeightRequest="60" WidthRequest="200" CornerRadius="10"  BackgroundColor="#B3E8FF"/>
+                    <Button Text="Couple"  TextColor="Black" x:Name="Couple" Clicked="game_couple_Click" HeightRequest="60" WidthRequest="200" CornerRadius="10" BackgroundColor="#B3E8FF"/>
+                    <Button Text="Hue" TextColor="Black" x:Name="Hue" Clicked="game_hue_Click" HeightRequest="60" WidthRequest="200" CornerRadius="10" BackgroundColor="#B3E8FF"/>
+                </StackLayout>
+
+            </Grid>
+           <!-- <RelativeLayout x:Name="Stack_game_breath" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <StackLayout>
+
+                    <Button TextColor="Black" Text="go to main menu" HeightRequest="60" WidthRequest="150" CornerRadius="10" Clicked="goto_mainmenu_Click" BackgroundColor="#DCDCDC"/>
+                    <Button TextColor="Black" Text="5 min" Clicked="game_breath_5_Click" CornerRadius="10" HeightRequest="60" WidthRequest="150" BackgroundColor="#B3E8FF" />
+                    <Button TextColor="Black" Text="10 min" Clicked="game_breath_10_Click"  CornerRadius="10" HeightRequest="60" WidthRequest="150" BackgroundColor="#B3E8FF"/>
+                    <Button TextColor="Black" Text="15 min" Clicked="game_breath_15_Click" CornerRadius="10" HeightRequest="60" WidthRequest="150"  BackgroundColor="#B3E8FF"/>
+
+                </StackLayout>
+
+
+
+
+            </RelativeLayout>
+            <StackLayout x:Name="Stack_game_breath_5" IsVisible="false">
+
+                <Button Text="Exit" TextColor="Black" Clicked="game_breath_Click" CornerRadius="10" Margin="10" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" BackgroundColor="#DCDCDC"/>
+
+                <StackLayout>
+                    <Frame  HeightRequest="80" WidthRequest="220" CornerRadius="20" HorizontalOptions="Center">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label x:Name = "label_Breath_5_min"  Text="05" FontSize="60" TextColor="Black"/>
+                            <Label Text=":" FontSize="60" TextColor="Black"/>
+                            <Label x:Name = "label_Breath_5_sec" Text="00" FontSize="60" TextColor="Black"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HeightRequest="80" WidthRequest="220" Margin="0,10" CornerRadius="20" HorizontalOptions="Center">
+                        <Label x:Name="label_breath" FontSize="60" HorizontalOptions="Center" TextColor="Black"/>
+                    </Frame>
+                    <RelativeLayout HorizontalOptions="Center">
+                        <Button TextColor="Black" Text="Start" x:Name="Button_Breath_5_start" Clicked="Button_Breath_5_start_Click" CornerRadius="10" WidthRequest="150" HeightRequest="60"  BackgroundColor="#B3E8FF"/>
+                    </RelativeLayout>
+
+                </StackLayout>
+
+            </StackLayout> -->
+            <StackLayout x:Name="Stack_game_couple" IsVisible="false">
+                <StackLayout Margin="0,270" Orientation="Vertical" HorizontalOptions="Center">
+                    <Label x:Name="inf" Text="" FontSize="30"/>
+                    <Button TextColor="Black" Text="go to main menu" Margin="70,0" CornerRadius="10" Clicked="goto_mainmenu_Click" BackgroundColor="#DCDCDC"/>
+                    <Button TextColor="Black" Text="3x4" Clicked="game_couple_3x4_Click" CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF" />
+                    <Button TextColor="Black" Text="4x5" Clicked="game_couple_4x5_Click"  CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF"/>
+
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout x:Name="Stack_game_couple_3x4" IsVisible="false">
+                <StackLayout Orientation="Horizontal">
+                    <Button TextColor="Black" Text="Exit" Clicked="game_couple_Click" CornerRadius="10"  HorizontalOptions="StartAndExpand" Margin="10" BackgroundColor="#DCDCDC"/>
+                    <Button TextColor="Black" x:Name="Button_couple_3x4_retry" Text= "Give up" CornerRadius="10" VerticalOptions="EndAndExpand" Margin="10" Clicked="game_couple_3x4_Click" BackgroundColor="#B3E8FF" />
+                </StackLayout>
+                <Label x:Name="Inf" FontSize="10" Text="13"/>
+                <Grid HorizontalOptions="Center" Margin="0,100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "100" />
+                        <RowDefinition Height= "100" />
+                        <RowDefinition Height= "100" />
+                        <RowDefinition Height= "100" />
+                    </Grid.RowDefinitions>
+
+
+                    <ImageButton x:Name="card23" Grid.Column="2" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                    <ImageButton x:Name="card22" Grid.Column="2" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                    <ImageButton x:Name="card21" Grid.Column="2" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                    <ImageButton x:Name="card20" Grid.Column="2" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+
+                    <ImageButton x:Name="card13" Grid.Column="1" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                    <ImageButton x:Name="card12" Grid.Column="1" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                    <ImageButton x:Name="card11" Grid.Column="1" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                    <ImageButton x:Name="card10" Grid.Column="1" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+
+                    <ImageButton x:Name="card03" Grid.Column="0" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                    <ImageButton x:Name="card02" Grid.Column="0" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                    <ImageButton x:Name="card01" Grid.Column="0" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                    <ImageButton x:Name="card00" Grid.Column="0" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout x:Name="Stack_game_couple_4x5" IsVisible="false">
+                <StackLayout Orientation="Horizontal">
+                    <Button TextColor="Black" Text="Exit" Clicked="game_couple_Click" CornerRadius="10"  HorizontalOptions="StartAndExpand" Margin="10" BackgroundColor="#DCDCDC"/>
+                    <Button TextColor="Black" x:Name="Button_couple_4x5_retry" Text= "Give up" CornerRadius="10" VerticalOptions="EndAndExpand" Margin="10" Clicked="game_couple_4x5_Click" BackgroundColor="#B3E8FF" />
+                </StackLayout>
+                <!--  <Label x:Name="Inf" FontSize="10" Text="132"/>-->
+                <Grid HorizontalOptions="Center" Margin="0,100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "80" />
+                        <RowDefinition Height= "80" />
+                        <RowDefinition Height= "80" />
+                        <RowDefinition Height= "80" />
+                        <RowDefinition Height= "80" />
+                    </Grid.RowDefinitions>
+
+
+                    <ImageButton x:Name="scard34" Grid.Column="3" Grid.Row="4" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard33" Grid.Column="3" Grid.Row="3" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard32" Grid.Column="3" Grid.Row="2" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+                    <ImageButton x:Name="scard31" Grid.Column="3" Grid.Row="1" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+                    <ImageButton x:Name="scard30" Grid.Column="3" Grid.Row="0" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+
+                    <ImageButton x:Name="scard24" Grid.Column="2" Grid.Row="4" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard23" Grid.Column="2" Grid.Row="3" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard22" Grid.Column="2" Grid.Row="2" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+                    <ImageButton x:Name="scard21" Grid.Column="2" Grid.Row="1" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+                    <ImageButton x:Name="scard20" Grid.Column="2" Grid.Row="0" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+
+
+                    <ImageButton x:Name="scard14" Grid.Column="1" Grid.Row="4" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+                    <ImageButton x:Name="scard13" Grid.Column="1" Grid.Row="3" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+                    <ImageButton x:Name="scard12" Grid.Column="1" Grid.Row="2" CornerRadius="10" Clicked="game_couple_4x5_field_Click" />
+                    <ImageButton x:Name="scard11" Grid.Column="1" Grid.Row="1" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard10" Grid.Column="1" Grid.Row="0" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+
+
+                    <ImageButton x:Name="scard04" Grid.Column="0" Grid.Row="4" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard03" Grid.Column="0" Grid.Row="3" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard02" Grid.Column="0" Grid.Row="2" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard01" Grid.Column="0" Grid.Row="1" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                    <ImageButton x:Name="scard00" Grid.Column="0" Grid.Row="0" CornerRadius="10" Clicked="game_couple_4x5_field_Click"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout x:Name="Stack_game_hue" IsVisible="false">
+                <StackLayout Margin="0,270" Orientation="Vertical" HorizontalOptions="Center">
+                    <Button TextColor="Black" Text="go to main menu" Margin="70,0" CornerRadius="10" Clicked="goto_mainmenu_Click" BackgroundColor="#DCDCDC"/>
+                    <!--<Button Text="3x4" Clicked="game_heu_3x4_Click" CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF" /> -->
+                    <Slider  Minimum="0" Maximum="1" x:Name="slider_s" Value="0.55" ValueChanged="slider_s_ValueChanged"/>
+                    <Label TextColor="Black" Text="{Binding Source={x:Reference slider_s}, Path=Value} " HorizontalOptions="Center"/>
+
+                    <Slider Minimum="0" Maximum="1" x:Name="slider_h" Value="0.15" ValueChanged="slider_h_ValueChanged" />
+                    <Label  TextColor="Black" Text="{Binding Source={x:Reference slider_h}, Path=Value} " HorizontalOptions="Center"/>
+
+                    <Button TextColor="Black" Text="5x5" Clicked="game_hue_5x5_Click"  CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF"/>
+                    <Button TextColor="Black" Text="9x9" Clicked="game_hue_9x9_Click"  CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF"/>
+                    
+
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <StackLayout x:Name="Stack_game_hue_5x5" IsVisible="false" VerticalOptions="Start">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                    <Button TextColor="Black" Text="Exit" Clicked="game_hue_Click" CornerRadius="10"  HorizontalOptions="StartAndExpand" Margin="10" BackgroundColor="#DCDCDC"/>
+
+                <Frame   BackgroundColor="PaleGoldenrod" CornerRadius="20" Padding="5,-10,5,0" HorizontalOptions="Center">
+
+                    <Label TextColor="Black" x:Name="arrinf" FontSize="50"/>
+                </Frame>
+                    <Button TextColor="Black" x:Name="Button_hue_5x5_retry" Text= "Give up" CornerRadius="10" VerticalOptions="EndAndExpand" Margin="10" Clicked="game_hue_5x5_Click" BackgroundColor="#B3E8FF" />
+                </StackLayout>
+
+                <!--  <Label x:Name="Inf" FontSize="10" Text="132"/>-->
+                <Grid HorizontalOptions="Center" RowSpacing="0" Margin="0,10" ColumnSpacing="0" VerticalOptions="Center" x:Name="Grid_hue_5x5" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="70"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height= "100" />
+                        <RowDefinition Height= "100" />
+                        <RowDefinition Height= "100" />
+                        <RowDefinition Height= "100" />
+                        <RowDefinition Height= "100" />
+                    </Grid.RowDefinitions>
+
+                   
+                </Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button TextColor="Black" x:Name="Button_hue_5x5_gradrand" Text= "swap" CornerRadius="10" HorizontalOptions="Center" Margin="10" Clicked="Button_hue_5x5_gradrand_Clicked" BackgroundColor="#B3E8FF" />
+                    <Button TextColor="Black" x:Name="Button_hue_5x5_tip" Text="tip" CornerRadius="10" HorizontalOptions="Center" Margin="10" BackgroundColor="#B3E8FF" Clicked="Button_hue_5x5_tip_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+            <StackLayout x:Name="Stack_game_hue_9x9" IsVisible="false"  Margin="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 10, 0, 0">
+                    <Button TextColor="Black" Text="Exit" Clicked="game_hue_Click" CornerRadius="10"  HorizontalOptions="StartAndExpand" Margin="10" BackgroundColor="#DCDCDC"/>
+
+                <Frame   BackgroundColor="PaleGoldenrod" CornerRadius="20" Padding="5,-10,5,0" HorizontalOptions="Center">
+
+                    <Label TextColor="Black" x:Name="arrinf_9x9" FontSize="50"/>
+                </Frame>
+                    <Button TextColor="Black" x:Name="Button_hue_9x9_retry" Text= "Give up" CornerRadius="10" VerticalOptions="End" Margin="10" Clicked="game_hue_9x9_Click" BackgroundColor="#B3E8FF" />
+                </StackLayout>
+
+                <!--  <Label x:Name="Inf" FontSize="10" Text="132"/>-->
+                <Grid HorizontalOptions="Center" RowSpacing="0" Margin="0,10" ColumnSpacing="0"  x:Name="Grid_hue_9x9" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="42"/>
+
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="42"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height= "60" />
+                        <RowDefinition Height= "60" />
+                        <RowDefinition Height= "60" />
+                        <RowDefinition Height= "60" />
+                        <RowDefinition Height= "60" />
+
+                        <RowDefinition Height= "60" />
+                        <RowDefinition Height= "60" />
+                        <RowDefinition Height= "60" />
+                        <RowDefinition Height= "60" />
+                    </Grid.RowDefinitions>
+
+                   
+                </Grid>
+                <StackLayout HorizontalOptions="Center">
+                
+                    
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button TextColor="Black" x:Name="Button_hue_9x9_gradrand" Text= "swap" CornerRadius="10" HorizontalOptions="Center" Margin="10" Clicked="Button_hue_9x9_gradrand_Clicked" BackgroundColor="#B3E8FF" />
+                        <Button TextColor="Black" x:Name="Button_hue_9x9_tip" Text="tip" CornerRadius="10" HorizontalOptions="Center" Margin="10" BackgroundColor="#B3E8FF" Clicked="Button_hue_9x9_tip_Clicked"/>
+                </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </Grid>
+    </RelativeLayout>
+
+</ContentPage>

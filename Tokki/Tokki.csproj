@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="pictures\background_menu_bord.png" />
+    <None Remove="pictures\couple\card.jpg" />
+    <None Remove="pictures\couple\card0.jpg" />
+    <None Remove="pictures\couple\card1.jpg" />
+    <None Remove="pictures\couple\card10.jpg" />
+    <None Remove="pictures\couple\card2.jpg" />
+    <None Remove="pictures\couple\card3.jpg" />
+    <None Remove="pictures\couple\card4.jpg" />
+    <None Remove="pictures\couple\card5.jpg" />
+    <None Remove="pictures\couple\card6.jpg" />
+    <None Remove="pictures\couple\card7.jpg" />
+    <None Remove="pictures\couple\card8.jpg" />
+    <None Remove="pictures\couple\card9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="pictures\background_menu_bord.png" />
+    <EmbeddedResource Include="pictures\couple\card.jpg" />
+    <EmbeddedResource Include="pictures\couple\card0.jpg" />
+    <EmbeddedResource Include="pictures\couple\card1.jpg" />
+    <EmbeddedResource Include="pictures\couple\card10.jpg" />
+    <EmbeddedResource Include="pictures\couple\card2.jpg" />
+    <EmbeddedResource Include="pictures\couple\card3.jpg" />
+    <EmbeddedResource Include="pictures\couple\card4.jpg" />
+    <EmbeddedResource Include="pictures\couple\card5.jpg" />
+    <EmbeddedResource Include="pictures\couple\card6.jpg" />
+    <EmbeddedResource Include="pictures\couple\card7.jpg" />
+    <EmbeddedResource Include="pictures\couple\card8.jpg" />
+    <EmbeddedResource Include="pictures\couple\card9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="pictures\breath\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Breath_10.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Breath_15.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Breath_5.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Menu_Breath.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

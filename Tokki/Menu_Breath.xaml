@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokki.Menu_Breath">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Grid>
+                <Image x:Name="Image_background"/>
+                <RelativeLayout x:Name="Stack_game_breath" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center">
+                    <StackLayout>
+                        <!--<Button Text="go to main menu" HeightRequest="60" WidthRequest="150" CornerRadius="10" Clicked="goto_mainmenu_Click" BackgroundColor="#DCDCDC"/>-->
+                        <Button Text="5 min" Clicked="game_breath_5_Click" CornerRadius="10" HeightRequest="60" WidthRequest="150" BackgroundColor="#B3E8FF" />
+                        <Button Text="10 min" Clicked="game_breath_10_Click"  CornerRadius="10" HeightRequest="60" WidthRequest="150" BackgroundColor="#B3E8FF"/>
+                        <Button Text="15 min" Clicked="game_breath_15_Click" CornerRadius="10" HeightRequest="60" WidthRequest="150"  BackgroundColor="#B3E8FF"/>
+
+                    </StackLayout>
+                </RelativeLayout>
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
