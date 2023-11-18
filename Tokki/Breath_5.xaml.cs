@@ -39,17 +39,6 @@ namespace Tokki
                 return counter++ > -1;
 
             });
-
-            Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
-            {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-
-
-                });
-                return counter_ms++ > -1;
-
-            });
         }
 
         public void Breath_timer()

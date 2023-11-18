@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokki.Menu_Hue">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Grid>
+                <Image x:Name="Image_background"/>
+                <StackLayout x:Name="Stack_game_hue" IsVisible="false">
+                    <StackLayout Margin="0,270" Orientation="Vertical" HorizontalOptions="Center">
+                        <Button TextColor="Black" Text="5x5" Clicked="game_hue_5x5_Click"  CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF"/>
+                       
+                        <Button TextColor="Black" Text="9x9" Clicked="game_hue_9x9_Click"  CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

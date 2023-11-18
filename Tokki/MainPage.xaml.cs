@@ -108,22 +108,24 @@ namespace Tokki
             Stack_game_breath_5.IsVisible = false;
             game_brearth_started = false;*/
         }
-        private void game_couple_Click(object sender, EventArgs e)
+        private async void game_couple_Click(object sender, EventArgs e)
         {
-            Stack_main_menu.IsVisible = false;
+            await Navigation.PushAsync(new Menu_Cauple());
+            /*Stack_main_menu.IsVisible = false;
             Stack_game_couple.IsVisible = true;
             Stack_game_couple_3x4.IsVisible = false;
-            Stack_game_couple_4x5.IsVisible = false;
+            Stack_game_couple_4x5.IsVisible = false;*/
             //Stack_game_breath_5.IsVisible = false;
             //f = false;
         }
-        private void game_hue_Click(object sender, EventArgs e)
+        private async void game_hue_Click(object sender, EventArgs e)
         {
-            Stack_main_menu.IsVisible = false;
+            await Navigation.PushAsync(new Menu_Hue());
+           /* Stack_main_menu.IsVisible = false;
             Stack_game_hue.IsVisible = true;
             //Stack_game_couple_3x4.IsVisible = false;
             Stack_game_hue_5x5.IsVisible = false;
-            Stack_game_hue_9x9.IsVisible = false;
+            Stack_game_hue_9x9.IsVisible = false;*/
             //Stack_game_breath_5.IsVisible = false;
             //f = false;
         }
@@ -133,7 +135,7 @@ namespace Tokki
             Stack_main_menu.IsVisible = true;
             //Stack_game_breath.IsVisible = false;
             Stack_game_couple.IsVisible = false;
-            Stack_game_hue.IsVisible = false;
+            //Stack_game_hue.IsVisible = false;
 
         }
 
@@ -245,7 +247,7 @@ namespace Tokki
             Stack_game_couple.IsVisible = false;
             Stack_game_couple_4x5.IsVisible = true;
         }
-        private void game_hue_5x5_Click(object sender, EventArgs e)
+       /* private void game_hue_5x5_Click(object sender, EventArgs e)
         {
             arrinf.Text = " yes ";
             Stack_game_hue.IsVisible = false;
@@ -264,7 +266,7 @@ namespace Tokki
             gengrad_9x9(new coordforgrad(0, 0), new coordforgrad(8, 0), new coordforgrad(0, 8), new coordforgrad(8, 8));
             copycolors_9x9();
             showgrad_9x9();
-        }
+        }*/
         private int game_couple_3x4_getindex()
         {
             var rand = new Random();
@@ -526,7 +528,7 @@ namespace Tokki
 
             //game_couple_enable(true);
         }
-        public class Hcolor
+       /* public class Hcolor
         {
 
             public double r;
@@ -813,107 +815,6 @@ namespace Tokki
                 }
 
             }
-            /*int i =0;
-            int j = 0;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-         
-             i =1;
-             j = 0;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 2;
-            j = 0;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 3;
-            j = 0;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 4;
-            j = 0;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-
-            i = 0;
-            j = 1;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 0;
-            j = 2;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 0;
-            j = 3;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 0;
-            j = 4;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 1;
-            j = 1;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 1;
-            j = 2;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 1;
-            j = 3;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 1;
-            j = 4;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 2;
-            j = 1;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 2;
-            j = 2;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 2;
-            j = 3;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 2;
-            j = 4;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 3;
-            j = 1;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 3;
-            j = 2;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 3;
-            j = 3;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 3;
-            j = 4;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 4;
-            j = 1;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 4;
-            j = 2;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 4;
-            j = 3;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-
-            i = 4;
-            j = 4;
-            ((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_orig_colors_5x5[i, j].r, hue_orig_colors_5x5[i, j].g, hue_orig_colors_5x5[i, j].b);
-            */
         }
         private void showgrad_9x9()
         {
@@ -1129,6 +1030,6 @@ namespace Tokki
         private void slider_h_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             hu = e.NewValue;
-        }
+        }*/
     }
 }
