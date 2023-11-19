@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tokki.Menu_Breath">
     <ContentPage.Content>
-        <RelativeLayout>
-            <Grid>
-                <Image x:Name="Image_background"/>
-                <RelativeLayout x:Name="Stack_game_breath" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center">
-                    <StackLayout>
+        <RelativeLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid HorizontalOptions="FillAndExpand">
+                <Image x:Name="Image_background" HorizontalOptions="Center" VerticalOptions="Center" Source="Tokki.pictures.background_menu_bord.png"/>
+                <RelativeLayout x:Name="Stack_game_breath" IsVisible="true" HorizontalOptions="Center" VerticalOptions="Center">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                         <!--<Button Text="go to main menu" HeightRequest="60" WidthRequest="150" CornerRadius="10" Clicked="goto_mainmenu_Click" BackgroundColor="#DCDCDC"/>-->
                         <Button Text="5 min" Clicked="game_breath_5_Click" CornerRadius="10" HeightRequest="60" WidthRequest="150" BackgroundColor="#B3E8FF" />
                         <Button Text="10 min" Clicked="game_breath_10_Click"  CornerRadius="10" HeightRequest="60" WidthRequest="150" BackgroundColor="#B3E8FF"/>

@@ -97,6 +97,7 @@ namespace Tokki
                 for (int j = 0; j < 5; j++)
                 {
                     hue_game_5x5_bottons[i, j] = new Button();
+                    hue_game_5x5_bottons[i, j].BorderColor = Color.White;
                     hue_game_5x5_bottons[i, j].TabIndex = i * 10 + j;
                     hue_game_5x5_bottons[i, j].CornerRadius = 0;
                     if (!(!((i == 4) && (j == 4)) && (!((i == 0) && (j == 4))) && (!((i == 0) && (j == 0))) && (!((i == 4) && (j == 0))) && (!((i == 2) && (j == 2)))))
@@ -205,8 +206,8 @@ namespace Tokki
                 for (int j = 0; j < 5; j++)
                 {
                     //hue_orig_colors_5x5[i, j]= tt;
-                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).Margin = 0;
-                    hue_game_5x5_bottons[i, j].Margin = 0;
+                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BorderWidth = 0;
+                    hue_game_5x5_bottons[i, j].BorderWidth = 0;
                     hue_game_5x5_bottons[i, j].BackgroundColor = Color.FromRgb(hue_game_colors_5x5[i, j].r, hue_game_colors_5x5[i, j].g, hue_game_colors_5x5[i, j].b);
                     //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_game_colors_5x5[i, j].r, hue_game_colors_5x5[i, j].g, hue_game_colors_5x5[i, j].b);
                 }
@@ -239,7 +240,7 @@ namespace Tokki
         {
             //scolor00.BackgroundColor = Color.FromRgb(0,0,0); 
 
-            ((Button)sender).Margin = 5;
+            ((Button)sender).BorderWidth = 5;
             if (k == 0)
             {
                 acl = ((Button)sender);
@@ -289,7 +290,7 @@ namespace Tokki
                 {
                     if (hue_game_colors_5x5[i, j] != hue_orig_colors_5x5[i, j])
                     {
-                        hue_game_5x5_bottons[i, j].Margin = 10;
+                        hue_game_5x5_bottons[i, j].BorderWidth = 10;
                         tipcl = hue_orig_colors_5x5[i, j];
                         goto LoopEnd;
 
@@ -304,7 +305,7 @@ namespace Tokki
                 {
                     if (hue_game_colors_5x5[i, j] == tipcl)
                     {
-                        hue_game_5x5_bottons[i, j].Margin = 10;
+                        hue_game_5x5_bottons[i, j].BorderWidth = 10;
 
                         return;
 

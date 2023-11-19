@@ -95,6 +95,7 @@ namespace Tokki
                 for (int j = 0; j < 9; j++)
                 {
                     hue_game_9x9_bottons[i, j] = new Button();
+                    hue_game_9x9_bottons[i, j].BorderColor = Color.White;
                     hue_game_9x9_bottons[i, j].TabIndex = i * 10 + j;
                     hue_game_9x9_bottons[i, j].CornerRadius = 0;
                     if (!(!((i == 8) && (j == 8)) && (!((i == 0) && (j == 8))) && (!((i == 0) && (j == 0))) && (!((i == 8) && (j == 0))) && (!((i == 4) && (j == 4)))))
@@ -197,8 +198,8 @@ namespace Tokki
                 for (int j = 0; j < 9; j++)
                 {
                     //hue_orig_colors_5x5[i, j]= tt;
-                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).Margin = 0;
-                    hue_game_9x9_bottons[i, j].Margin = 0;
+                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BorderWidth = 0;
+                    hue_game_9x9_bottons[i, j].BorderWidth = 0;
                     hue_game_9x9_bottons[i, j].BackgroundColor = Color.FromRgb(hue_game_colors_9x9[i, j].r, hue_game_colors_9x9[i, j].g, hue_game_colors_9x9[i, j].b);
                     //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_game_colors_5x5[i, j].r, hue_game_colors_5x5[i, j].g, hue_game_colors_5x5[i, j].b);
                 }
@@ -227,7 +228,7 @@ namespace Tokki
         }
         private void game_hue_9x9_field_Click(object sender, EventArgs e)
         {
-            ((Button)sender).Margin = 4;
+            ((Button)sender).BorderWidth = 4;
             if (k == 0)
             {
                 acl = ((Button)sender);
@@ -272,7 +273,7 @@ namespace Tokki
                 {
                     if (hue_game_colors_9x9[i, j] != hue_orig_colors_9x9[i, j])
                     {
-                        hue_game_9x9_bottons[i, j].Margin = 6;
+                        hue_game_9x9_bottons[i, j].BorderWidth = 6;
                         tipcl = hue_orig_colors_9x9[i, j];
                         goto LoopEnd;
 
@@ -287,7 +288,7 @@ namespace Tokki
                 {
                     if (hue_game_colors_9x9[i, j] == tipcl)
                     {
-                        hue_game_9x9_bottons[i, j].Margin = 6;
+                        hue_game_9x9_bottons[i, j].BorderWidth = 6;
 
                         return;
 
