@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokki.Menu_Cauple">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Grid>
+                <Image x:Name="Image_background"/>
+                <StackLayout x:Name="Stack_game_couple" IsVisible="false">
+                    <StackLayout Margin="0,270" Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="inf" Text="" FontSize="30"/>
+                        <Button TextColor="Black" Text="3x4" Clicked="game_couple_3x4_Click" CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF" />
+                        <Button TextColor="Black" Text="4x5" Clicked="game_couple_4x5_Click"  CornerRadius="10" Margin="70,0" BackgroundColor="#B3E8FF"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
