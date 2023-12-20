@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,14 +12,11 @@ namespace Tokki
         bool game_brearth_started = false;
         int breath_mode = 0;
         int counter = 1;
-        int counter_ms = 1;
+       
         int t_5min = 304;
         public Breath_5()
         {
             InitializeComponent();
-
-            Image_background.Source = ImageSource.FromResource("Tokki.pictures.background_menu_bord.png");
-            Image_background.Aspect = Aspect.Fill;
             Stack_game_breath_5.IsVisible = true;
             label_Breath_5_min.Text = "5";
             label_Breath_5_sec.Text = "04";
@@ -32,15 +26,14 @@ namespace Tokki
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-
                     Breath_timer();
-                    //game_couple_closeall();
                 });
                 return counter++ > -1;
 
             });
         }
 
+            int ima = 0;
         public void Breath_timer()
         {
             int sec;
@@ -67,31 +60,64 @@ namespace Tokki
                 {
                     label_Breath_5_min.Text = min.ToString();
                 }
-                else { label_Breath_5_min.Text = "0" + min.ToString(); }
+                else { label_Breath_5_min.Text = min.ToString(); }
                 if (sec > 9)
                 {
                     label_Breath_5_sec.Text = sec.ToString();
                 }
                 else { label_Breath_5_sec.Text = "0" + sec.ToString(); }
 
-                if ((t_5min - counter) % br < 19) label_breath.Text = "inhale";
-                if ((t_5min - counter) % br < 15) label_breath.Text = "holding";
-                if ((t_5min - counter) % br < 8) label_breath.Text = "exhale";
-                //inf.Text=( (t_5min - counter) % 19).ToString();
+                if ((t_5min - counter) % br < 19 && (t_5min - counter) % br >= 15)
+                {
+                    label_breath.Text = "вдох";
+                    if (ima != 1)
+                    {
+                        ima = 1;
+                        Image_breath_5.Source ="inhale.png";
+                    }
+                }
+                if ((t_5min - counter) % br < 15 && (t_5min - counter) % br >= 8)
+                {
+                    label_breath.Text = "держи";
+                    if (ima != 2)
+                    {
+                        ima = 2;
+                        Image_breath_5.Source = "holding.png";
+                    }
+                }
+                if ((t_5min - counter) % br < 8)
+                {
+                    label_breath.Text = "выдох";
+                    if (ima != 3)
+                    {
+                        ima = 3;
+                        Image_breath_5.Source = "exhale.png";
+                    }
+                }
             }
-
-            //label_Breath_5_sec.Text=DateTime.Now.Second.ToString();
         }
         private void Button_Breath_5_start_Click(object sender, EventArgs e)
         {
 
             game_brearth_started = !game_brearth_started;
             counter = 0;
-            if (game_brearth_started) Button_Breath_5_start.Text = "Stop";
-            else Button_Breath_5_start.Text = "Start";
+            if (game_brearth_started) Button_Breath_5_start.Source = "stop.png";
+            else Button_Breath_5_start.Source = "start.png";
 
 
 
+        }
+
+        private async void game_breath_5_Click(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync(false);
+        }
+        
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PopAsync(false);
+            base.OnBackButtonPressed();
+            return false;
         }
     }
 }

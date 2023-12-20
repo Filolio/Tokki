@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tokki.Cauple_3x4">
+             x:Class="Tokki.Cauple_3x4"
+             BackgroundImage="background_Tosha.png"
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <RelativeLayout>
-            <Grid>
-                <Image x:Name="Image_background"/>
-                <StackLayout x:Name="Stack_game_couple_3x4" IsVisible="false">
-                    <StackLayout Orientation="Horizontal">
-                      <Button TextColor="Black" x:Name="Button_couple_3x4_retry" Text= "Give up" CornerRadius="10" VerticalOptions="EndAndExpand" Margin="10" Clicked="game_couple_3x4_Click" BackgroundColor="#B3E8FF" />
-                    </StackLayout>
-                    <Label x:Name="Inf" FontSize="10" Text="13"/>
-                    <Grid HorizontalOptions="Center" Margin="0,100">
+        <Grid>
+                <StackLayout x:Name="Stack_game_couple_3x4">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="vykhod.png" VerticalOptions="Start" Margin="10" CornerRadius="10" HeightRequest="50" WidthRequest="110" Clicked="game_cauple_3x4_exit_Click" BackgroundColor="Transparent"/>
+                    <ImageButton Source="sdatsya.png" x:Name="Button_couple_3x4_retry" CornerRadius="10" HorizontalOptions="EndAndExpand"  HeightRequest="50" WidthRequest="110" Margin="10" Clicked="game_couple_3x4_Click" BackgroundColor="Transparent" />
+                </StackLayout>
+                <Grid HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="100"/>
@@ -25,23 +25,22 @@
                         </Grid.RowDefinitions>
 
 
-                        <ImageButton x:Name="card23" Grid.Column="2" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
-                        <ImageButton x:Name="card22" Grid.Column="2" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
-                        <ImageButton x:Name="card21" Grid.Column="2" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
-                        <ImageButton x:Name="card20" Grid.Column="2" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                        <ImageButton x:Name="card23" Source="card0.png" Grid.Column="2" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                        <ImageButton x:Name="card22" Source="card0.png" Grid.Column="2" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                        <ImageButton x:Name="card21" Source="card0.png" Grid.Column="2" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                        <ImageButton x:Name="card20" Source="card0.png" Grid.Column="2" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
 
-                        <ImageButton x:Name="card13" Grid.Column="1" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
-                        <ImageButton x:Name="card12" Grid.Column="1" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
-                        <ImageButton x:Name="card11" Grid.Column="1" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
-                        <ImageButton x:Name="card10" Grid.Column="1" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                        <ImageButton x:Name="card13" Source="card0.png" Grid.Column="1" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                        <ImageButton x:Name="card12" Source="card0.png" Grid.Column="1" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click" />
+                        <ImageButton x:Name="card11" Source="card0.png" Grid.Column="1" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                        <ImageButton x:Name="card10" Source="card0.png" Grid.Column="1" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
 
-                        <ImageButton x:Name="card03" Grid.Column="0" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
-                        <ImageButton x:Name="card02" Grid.Column="0" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
-                        <ImageButton x:Name="card01" Grid.Column="0" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
-                        <ImageButton x:Name="card00" Grid.Column="0" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                        <ImageButton x:Name="card03" Source="card0.png" Grid.Column="0" Grid.Row="3" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                        <ImageButton x:Name="card02" Source="card0.png" Grid.Column="0" Grid.Row="2" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                        <ImageButton x:Name="card01" Source="card0.png" Grid.Column="0" Grid.Row="1" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
+                        <ImageButton x:Name="card00" Source="card0.png" Grid.Column="0" Grid.Row="0" CornerRadius="10" Clicked="game_couple_3x4_field_Click"/>
                     </Grid>
                 </StackLayout>
             </Grid>
-        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

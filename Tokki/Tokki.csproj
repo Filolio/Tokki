@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <BuildWithMSBuildOnMono>true</BuildWithMSBuildOnMono>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -11,44 +12,93 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="pictures\background_menu_bord.png" />
-    <None Remove="pictures\couple\card.jpg" />
-    <None Remove="pictures\couple\card0.jpg" />
-    <None Remove="pictures\couple\card1.jpg" />
-    <None Remove="pictures\couple\card10.jpg" />
-    <None Remove="pictures\couple\card2.jpg" />
-    <None Remove="pictures\couple\card3.jpg" />
-    <None Remove="pictures\couple\card4.jpg" />
-    <None Remove="pictures\couple\card5.jpg" />
-    <None Remove="pictures\couple\card6.jpg" />
-    <None Remove="pictures\couple\card7.jpg" />
-    <None Remove="pictures\couple\card8.jpg" />
-    <None Remove="pictures\couple\card9.jpg" />
+    <None Remove="font\Round_Bold.ttf" />
+    <None Remove="pictures\background_Tosha.png" />
+    <None Remove="pictures\breath\exhale.png" />
+    <None Remove="pictures\breath\holding.png" />
+    <None Remove="pictures\breath\inhale.png" />
+    <None Remove="pictures\button.png" />
+    <None Remove="pictures\c3x4.png" />
+    <None Remove="pictures\c4x5.png" />
+    <None Remove="pictures\couple\card.png" />
+    <None Remove="pictures\couple\card0.png" />
+    <None Remove="pictures\couple\card1.png" />
+    <None Remove="pictures\couple\card10.png" />
+    <None Remove="pictures\couple\card2.png" />
+    <None Remove="pictures\couple\card3.png" />
+    <None Remove="pictures\couple\card4.png" />
+    <None Remove="pictures\couple\card5.png" />
+    <None Remove="pictures\couple\card6.png" />
+    <None Remove="pictures\couple\card7.png" />
+    <None Remove="pictures\couple\card8.png" />
+    <None Remove="pictures\couple\card9.png" />
+    <None Remove="pictures\Font\Rounds_Black.otf" />
+    <None Remove="pictures\h5x5.png" />
+    <None Remove="pictures\h9x9.png" />
+    <None Remove="pictures\kosit.png" />
+    <None Remove="pictures\lawn\background_lawn.png" />
+    <None Remove="pictures\lawn\foreground_lawn.png" />
+    <None Remove="pictures\peremeshat.png" />
+    <None Remove="pictures\podskazka.png" />
+    <None Remove="pictures\Round_Bold.ttf" />
+    <None Remove="pictures\sdatsya.png" />
+    <None Remove="pictures\start.png" />
+    <None Remove="pictures\stop.png" />
+    <None Remove="pictures\Tokki.png" />
+    <None Remove="pictures\tsikla_32.png" />
+    <None Remove="pictures\tsiklov_16.png" />
+    <None Remove="pictures\tsiklov_48.png" />
+    <None Remove="pictures\vykhod.png" />
+    <None Remove="pictures\zanovo.png" />
+    <None Remove="pictures\lawn\kosilka.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="pictures\background_menu_bord.png" />
-    <EmbeddedResource Include="pictures\couple\card.jpg" />
-    <EmbeddedResource Include="pictures\couple\card0.jpg" />
-    <EmbeddedResource Include="pictures\couple\card1.jpg" />
-    <EmbeddedResource Include="pictures\couple\card10.jpg" />
-    <EmbeddedResource Include="pictures\couple\card2.jpg" />
-    <EmbeddedResource Include="pictures\couple\card3.jpg" />
-    <EmbeddedResource Include="pictures\couple\card4.jpg" />
-    <EmbeddedResource Include="pictures\couple\card5.jpg" />
-    <EmbeddedResource Include="pictures\couple\card6.jpg" />
-    <EmbeddedResource Include="pictures\couple\card7.jpg" />
-    <EmbeddedResource Include="pictures\couple\card8.jpg" />
-    <EmbeddedResource Include="pictures\couple\card9.jpg" />
+    <EmbeddedResource Include="font\Round_Bold.ttf" />
+    <EmbeddedResource Include="pictures\Font\Rounds_Black.otf" />
+    <EmbeddedResource Include="pictures\peremeshat.png" />
+    <EmbeddedResource Include="pictures\podskazka.png" />
+    <EmbeddedResource Include="pictures\Round_Bold.ttf" />
+    <EmbeddedResource Include="pictures\sdatsya.png" />
+    <EmbeddedResource Include="pictures\start.png" />
+    <EmbeddedResource Include="pictures\stop.png" />
+    <EmbeddedResource Include="pictures\tsiklov_16.png" />
+    <EmbeddedResource Include="pictures\tsikla_32.png" />
+    <EmbeddedResource Include="pictures\c3x4.png" />
+    <EmbeddedResource Include="pictures\tsiklov_48.png" />
+    <EmbeddedResource Include="pictures\c4x5.png" />
+    <EmbeddedResource Include="pictures\h5x5.png" />
+    <EmbeddedResource Include="pictures\h9x9.png" />
+    <EmbeddedResource Include="pictures\background_Tosha.png" />
+    <EmbeddedResource Include="pictures\breath\exhale.png" />
+    <EmbeddedResource Include="pictures\breath\holding.png" />
+    <EmbeddedResource Include="pictures\breath\inhale.png" />
+    <EmbeddedResource Include="pictures\button.png" />
+    <EmbeddedResource Include="pictures\couple\card.png" />
+    <EmbeddedResource Include="pictures\couple\card0.png" />
+    <EmbeddedResource Include="pictures\couple\card1.png" />
+    <EmbeddedResource Include="pictures\couple\card10.png" />
+    <EmbeddedResource Include="pictures\couple\card2.png" />
+    <EmbeddedResource Include="pictures\couple\card3.png" />
+    <EmbeddedResource Include="pictures\couple\card4.png" />
+    <EmbeddedResource Include="pictures\couple\card5.png" />
+    <EmbeddedResource Include="pictures\couple\card6.png" />
+    <EmbeddedResource Include="pictures\couple\card7.png" />
+    <EmbeddedResource Include="pictures\couple\card8.png" />
+    <EmbeddedResource Include="pictures\couple\card9.png" />
+    <EmbeddedResource Include="pictures\kosit.png" />
+    <EmbeddedResource Include="pictures\lawn\background_lawn.png" />
+    <EmbeddedResource Include="pictures\lawn\foreground_lawn.png" />
+    <EmbeddedResource Include="pictures\Tokki.png" />
+    <EmbeddedResource Include="pictures\vykhod.png" />
+    <EmbeddedResource Include="pictures\zanovo.png" />
+    <EmbeddedResource Include="pictures\lawn\kosilka.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.6" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="pictures\breath\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -73,13 +123,7 @@
     <EmbeddedResource Update="Hue_9x9.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Menu_Breath.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Menu_Cauple.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Menu_Hue.xaml">
+    <EmbeddedResource Update="lawn.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="Tokki.lawn"
+              BackgroundImage="background_lawn.png"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="Stack_game_lawn" VerticalOptions="Center"  HorizontalOptions="Center" BackgroundColor="Transparent"  >
+            <skia:SKCanvasView x:Name="canvas" WidthRequest="1080" HeightRequest="2560" PaintSurface="OnCanvasViewPaintSurface" >
+            </skia:SKCanvasView>
+            <!--<Label x:Name="tst" FontSize="30" Margin="100"/>-->
+            <ImageButton Source="vykhod.png" VerticalOptions="Start" Margin="10" CornerRadius="10" HeightRequest="50" WidthRequest="110" Clicked="game_lawn_exit_Click" BackgroundColor="Transparent"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

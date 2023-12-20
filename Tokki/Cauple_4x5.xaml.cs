@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +8,7 @@ namespace Tokki
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Cauple_4x5 : ContentPage
     {
-        int[] indexes_3x4 = { 2, 2, 2, 2, 2, 2 };
+        
         int[] indexes_4x5 = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
         int c;
         int k;
@@ -22,8 +18,6 @@ namespace Tokki
         public Cauple_4x5()
         {
             InitializeComponent();
-            Image_background.Source = ImageSource.FromResource("Tokki.pictures.background_menu_bord.png");
-            Image_background.Aspect = Aspect.Fill;
 
             new_game_couple_4x5();
         }
@@ -32,7 +26,7 @@ namespace Tokki
         {
             k = 0;
             par45 = 0;
-            Button_couple_4x5_retry.Text = "Give up";
+            Button_couple_4x5_retry.Source = "sdatsya.png";
             scard00.TabIndex = game_couple_4x5_getindex();
             scard01.TabIndex = game_couple_4x5_getindex();
             scard02.TabIndex = game_couple_4x5_getindex();
@@ -89,67 +83,67 @@ namespace Tokki
         private void game_couple_4x5_closeall()
         {
             (scard00).TabIndex += 100;
-            (scard00).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard00).Source = ("card" + 0.ToString() + ".png");
 
             (scard01).TabIndex += 100;
-            (scard01).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard01).Source = ("card" + 0.ToString() + ".png");
 
             (scard02).TabIndex += 100;
-            (scard02).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard02).Source = ("card" + 0.ToString() + ".png");
 
             (scard03).TabIndex += 100;
-            (scard03).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard03).Source = ("card" + 0.ToString() + ".png");
 
             (scard04).TabIndex += 100;
-            (scard04).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard04).Source = ("card" + 0.ToString() + ".png");
 
 
             (scard10).TabIndex += 100;
-            (scard10).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard10).Source = ("card" + 0.ToString() + ".png");
 
             (scard11).TabIndex += 100;
-            (scard11).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard11).Source = ("card" + 0.ToString() + ".png");
 
             (scard12).TabIndex += 100;
-            (scard12).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard12).Source = ("card" + 0.ToString() + ".png");
 
             (scard13).TabIndex += 100;
-            (scard13).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard13).Source = ("card" + 0.ToString() + ".png");
 
             (scard14).TabIndex += 100;
-            (scard14).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard14).Source = ("card" + 0.ToString() + ".png");
 
 
             (scard20).TabIndex += 100;
-            (scard20).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard20).Source = ("card" + 0.ToString() + ".png");
 
             (scard21).TabIndex += 100;
-            (scard21).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard21).Source = ("card" + 0.ToString() + ".png");
 
             (scard22).TabIndex += 100;
-            (scard22).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard22).Source = ("card" + 0.ToString() + ".png");
 
             (scard23).TabIndex += 100;
-            (scard23).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard23).Source = ("card" + 0.ToString() + ".png");
 
             (scard24).TabIndex += 100;
-            (scard24).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard24).Source = ("card" + 0.ToString() + ".png");
 
 
             (scard30).TabIndex += 100;
-            (scard30).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard30).Source = ("card" + 0.ToString() + ".png");
 
             (scard31).TabIndex += 100;
-            (scard31).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard31).Source = ("card" + 0.ToString() + ".png");
 
             (scard32).TabIndex += 100;
-            (scard32).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard32).Source = ("card" + 0.ToString() + ".png");
 
             (scard33).TabIndex += 100;
-            (scard33).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard33).Source = ("card" + 0.ToString() + ".png");
 
             (scard34).TabIndex += 100;
-            (scard34).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+            (scard34).Source = ("card" + 0.ToString() + ".png");
         }
 
         private void game_couple_4x5_field_Click(object sender, EventArgs e)
@@ -157,7 +151,7 @@ namespace Tokki
             if (((ImageButton)sender).TabIndex > 100)
             {
                 ((ImageButton)sender).TabIndex -= 100;
-                ((ImageButton)sender).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + ((ImageButton)sender).TabIndex.ToString() + ".jpg");
+                ((ImageButton)sender).Source = ("card" + ((ImageButton)sender).TabIndex.ToString() + ".png");
                 if (k == 0 || k == 2)
                 {
 
@@ -168,12 +162,12 @@ namespace Tokki
                         if ((a).TabIndex < 100 && (a).TabIndex > 0)
                         {
                             (a).TabIndex += 100;
-                            (a).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+                            (a).Source = ("card" + 0.ToString() + ".png");
                         }
                         if ((b).TabIndex < 100 && (b).TabIndex > 0)
                         {
                             (b).TabIndex += 100;
-                            (b).Source = ImageSource.FromResource("Tokki.pictures.couple.card" + 0.ToString() + ".jpg");
+                            (b).Source = ("card" + 0.ToString() + ".png");
                         }
                     }
                     a = ((ImageButton)sender);
@@ -190,15 +184,23 @@ namespace Tokki
                         par45 += 1;
                         if (par45 == 10)
                         {
-                            Button_couple_4x5_retry.Text = "Retry";//Inf.Text = "You Win";
+                            Button_couple_4x5_retry.Source = "zanovo.png";
                         }
                     }
-
-
                 }
 
                 k++;
             }
+        }
+        private async void game_cauple_4x5_exit_Click(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync(false);
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PopAsync(false);
+            base.OnBackButtonPressed();
+            return false;
         }
     }
 }

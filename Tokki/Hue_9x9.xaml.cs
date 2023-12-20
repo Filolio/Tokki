@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,9 +21,6 @@ namespace Tokki
         public Hue_9x9()
         {
             InitializeComponent();
-            Image_background.Source = ImageSource.FromResource("Tokki.pictures.background_menu_bord.png");
-            Image_background.Aspect = Aspect.Fill;
-
             new_game_hue_9x9();
         }
 
@@ -36,7 +30,7 @@ namespace Tokki
         }
        private void new_game_hue_9x9()
         {
-            arrinf_9x9.Text = "yes";
+            arrinf_9x9.Text = "Да";
             Stack_game_hue_9x9.IsVisible = true;
             gencornercolor_9x9();
             gengrad_9x9(new coordforgrad(0, 0), new coordforgrad(8, 0), new coordforgrad(0, 8), new coordforgrad(8, 8));
@@ -129,11 +123,10 @@ namespace Tokki
         }
         private void gengrad_9x9(coordforgrad lu, coordforgrad ru, coordforgrad ld, coordforgrad rd)
         {
-            //hue_orig_colors_5x5inf.Text += String.Format("[({0},{1}) ({2},{3}) ({4},{5}) ({6},{7}) {8}]", lu.x, lu.y, ru.x ,ru.y, ld.x , ld.y, rd.x , rd.y, gl);
             if ((lu.x + ru.x) % 2 == 0 || (lu.y + ld.y) % 2 == 0 || (ru.y + rd.y % 2) == 0 || (ld.x + rd.x) % 2 == 0)
             {
 
-                //hue_orig_colors_5x5inf.Text += String.Format("yes \n");
+                
                 hue_orig_colors_9x9[(lu.x + ru.x + ld.x + rd.x) / 4, (lu.y + ru.y + ld.y + rd.y) / 4] = getavecolor_9x9(lu, ru, ld, rd);
                 hue_orig_colors_9x9[(lu.x + ru.x) / 2, (lu.y + ru.y) / 2] = getavecolor_9x9(lu, ru);
                 hue_orig_colors_9x9[(ld.x + lu.x) / 2, (ld.y + lu.y) / 2] = getavecolor_9x9(ld, lu);
@@ -145,7 +138,7 @@ namespace Tokki
                 gengrad_9x9(new coordforgrad((lu.x + ru.x + ld.x + rd.x) / 4, (lu.y + ru.y + ld.y + rd.y) / 4), new coordforgrad((ru.x + rd.x) / 2, (ru.y + rd.y) / 2), new coordforgrad((ld.x + rd.x) / 2, (ld.y + rd.y) / 2), rd);
             }
 
-            //hue_orig_colors_5x5inf.Text += String.Format("no \n");
+           
 
 
         }
@@ -178,11 +171,11 @@ namespace Tokki
                 ky = rand.Next(0, 9);
                 lx = rand.Next(0, 9);
                 ly = rand.Next(0, 9);
-                //arrinf.Text += String.Format("({0} {1}),({2},{3}) \n", kx, ky, lx, ly);
+               
                 if (!((kx == 8) && (ky == 8)) && (!((kx == 0) && (ky == 8))) && (!((kx == 0) && (ky == 0))) && (!((kx == 8) && (ky == 0))) && (!((kx == 4) && (ky == 4))))
                     if (!((lx == 8) && (ly == 8)) && (!((lx == 0) && (ly == 8))) && (!((lx == 0) && (ly == 0))) && (!((lx == 8) && (ly == 0))) && (!((lx == 4) && (ly == 4))))
                     {
-                        //arrinf.Text += "+";
+                        
                         Hcolor temp = hue_game_colors_9x9[kx, ky];
                         hue_game_colors_9x9[kx, ky] = hue_game_colors_9x9[lx, ly];
                         hue_game_colors_9x9[lx, ly] = temp;
@@ -197,11 +190,9 @@ namespace Tokki
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    //hue_orig_colors_5x5[i, j]= tt;
-                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BorderWidth = 0;
+                    
                     hue_game_9x9_bottons[i, j].BorderWidth = 0;
                     hue_game_9x9_bottons[i, j].BackgroundColor = Color.FromRgb(hue_game_colors_9x9[i, j].r, hue_game_colors_9x9[i, j].g, hue_game_colors_9x9[i, j].b);
-                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_game_colors_5x5[i, j].r, hue_game_colors_5x5[i, j].g, hue_game_colors_5x5[i, j].b);
                 }
 
             }
@@ -247,7 +238,7 @@ namespace Tokki
                 showgrad_9x9();
                 if (is_hue_completed_9x9())
 
-                    arrinf_9x9.Text = " yes ";
+                    arrinf_9x9.Text = " Да ";
 
                 else arrinf_9x9.Text = pair_not_right.ToString();
 
@@ -263,9 +254,6 @@ namespace Tokki
         }
         private void Button_hue_9x9_tip_Clicked(object sender, EventArgs e)
         {
-            //genrandgrad();
-            //arrinf.Text = " no ";
-            //showgrad();
             Hcolor tipcl = new Hcolor();
             for (int i = 0; i < 9; i++)
             {
@@ -295,6 +283,16 @@ namespace Tokki
                     }
                 }
             }
+        }
+        private async void game_hue_9x9_exit_Click(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync(false);
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PopAsync(false);
+            base.OnBackButtonPressed();
+            return false;
         }
 
     }

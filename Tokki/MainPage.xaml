@@ -1,24 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tokki.MainPage">
+             x:Class="Tokki.MainPage"
+             BackgroundImage="background_Tosha.png"
+             NavigationPage.HasNavigationBar="false">
 
-    <RelativeLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Grid HorizontalOptions="FillAndExpand">
-            <Image x:Name="Image_background" HorizontalOptions="Center" VerticalOptions="Center"/>
+    <Grid x:Name ="Stack_main_menu">
+        <Image Source="Tokki.png" VerticalOptions ="Start"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions ="Center">
+            <StackLayout  Margin="0, 150, 0, 0">
+                <Label Text="Дыхание" FontFamily= "Rounds_Black" VerticalOptions="Start" HorizontalOptions ="Center"  FontSize="25" TextColor="#395582"/>
+                <ImageButton Source="tsiklov_16.png" Clicked="game_breath_5_Click" VerticalOptions="Start" BackgroundColor="Transparent" CornerRadius="10" HeightRequest="60" WidthRequest="130"/>
+                <ImageButton Source="tsikla_32.png" Clicked="game_breath_10_Click" CornerRadius="10" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="60"/>
+                <ImageButton Source="tsiklov_48.png" Clicked="game_breath_15_Click" CornerRadius="10" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="60"/>
+                <Label Text="Газон" FontFamily= "Rounds_Black" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand"  FontSize="25" TextColor="#395582"/>
+                <ImageButton Source="kosit.png" Clicked="game_lawn_Click" HeightRequest="60" CornerRadius="10" BackgroundColor="Transparent"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="EndAndExpand" Margin="40, 150, 0, 0">
+                <Label Text="Градиент" FontFamily= "Rounds_Black" HorizontalOptions="Center" FontSize="25" TextColor="#395582"/>
+                <ImageButton Source="h5x5.png" Clicked="game_hue_5x5_Click" CornerRadius="10" HeightRequest="60" WidthRequest="130" BackgroundColor="Transparent"/>
+                <ImageButton Source="h9x9.png" Clicked="game_hue_9x9_Click" CornerRadius="10" HeightRequest="60" BackgroundColor="Transparent"/>
+                <Label Text="Найди пару" FontFamily= "Rounds_Black" HorizontalOptions="Center"  VerticalOptions="Center"  FontSize="25" TextColor="#395582"/>
+                <ImageButton Source="c3x4.png" Clicked="game_couple_3x4_Click" CornerRadius="10" HeightRequest="60" BackgroundColor="Transparent"/>
+                <ImageButton Source="c4x5.png" Clicked="game_couple_4x5_Click" CornerRadius="10" HeightRequest="60" BackgroundColor="Transparent"/>
 
-            <Grid x:Name ="Stack_main_menu" IsVisible="true"  HorizontalOptions="Center" VerticalOptions="Center">
-                <StackLayout>
-
-
-                    <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Start"  FontSize="30" TextColor="Black"/>
-                    <Button Text="Breath" TextColor="Black" x:Name="Breath" Clicked="game_breath_Click" HeightRequest="60" WidthRequest="200" CornerRadius="10"  BackgroundColor="#B3E8FF"/>
-                    <Button Text="Couple"  TextColor="Black" x:Name="Couple" Clicked="game_couple_Click" HeightRequest="60" WidthRequest="200" CornerRadius="10" BackgroundColor="#B3E8FF"/>
-                    <Button Text="Hue" TextColor="Black" x:Name="Hue" Clicked="game_hue_Click" HeightRequest="60" WidthRequest="200" CornerRadius="10" BackgroundColor="#B3E8FF"/>
-                </StackLayout>
-
-            </Grid>
-        </Grid>
-    </RelativeLayout>
-
+            </StackLayout>
+        </StackLayout>
+    </Grid>
 </ContentPage>

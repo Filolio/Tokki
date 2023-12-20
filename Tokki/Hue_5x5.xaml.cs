@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static Tokki.MainPage;
+
 
 namespace Tokki
 {
@@ -25,8 +22,7 @@ namespace Tokki
         public Hue_5x5()
         {
             InitializeComponent();
-            Image_background.Source = ImageSource.FromResource("Tokki.pictures.background_menu_bord.png");
-            Image_background.Aspect = Aspect.Fill;
+           
 
             new_game_hue_5x5();
         }
@@ -36,7 +32,7 @@ namespace Tokki
         }
 
         private void new_game_hue_5x5(){
-            arrinf.Text = " yes ";
+            arrinf.Text = " Да ";
             Stack_game_hue_5x5.IsVisible = true;
             gencornercolor_5x5();
             gengrad_5x5(new coordforgrad(0, 0), new coordforgrad(4, 0), new coordforgrad(0, 4), new coordforgrad(4, 4));
@@ -90,7 +86,7 @@ namespace Tokki
             hue_orig_colors_5x5[0, 4] = new Hcolor(rand_color_rgb.R, rand_color_rgb.G, rand_color_rgb.B);
             rand_color_rgb = Color.FromHsv((((rand_color_h + hu * 3) * 100) % 100) / 100, saturat, 1);
             hue_orig_colors_5x5[4, 4] = new Hcolor(rand_color_rgb.R, rand_color_rgb.G, rand_color_rgb.B);
-            //hue_orig_colors_5x5[3, 3] = tt;
+           
             Grid_hue_5x5.Children.Clear();
             for (int i = 0; i < 5; i++)
             {
@@ -134,11 +130,11 @@ namespace Tokki
 
         private void gengrad_5x5(coordforgrad lu, coordforgrad ru, coordforgrad ld, coordforgrad rd)
         {
-            //hue_orig_colors_5x5inf.Text += String.Format("[({0},{1}) ({2},{3}) ({4},{5}) ({6},{7}) {8}]", lu.x, lu.y, ru.x ,ru.y, ld.x , ld.y, rd.x , rd.y, gl);
+            
             if ((lu.x + ru.x) % 2 == 0 || (lu.y + ld.y) % 2 == 0 || (ru.y + rd.y % 2) == 0 || (ld.x + rd.x) % 2 == 0)
             {
 
-                //hue_orig_colors_5x5inf.Text += String.Format("yes \n");
+                
                 hue_orig_colors_5x5[(lu.x + ru.x + ld.x + rd.x) / 4, (lu.y + ru.y + ld.y + rd.y) / 4] = getavecolor_5x5(lu, ru, ld, rd);
                 hue_orig_colors_5x5[(lu.x + ru.x) / 2, (lu.y + ru.y) / 2] = getavecolor_5x5(lu, ru);
                 hue_orig_colors_5x5[(ld.x + lu.x) / 2, (ld.y + lu.y) / 2] = getavecolor_5x5(ld, lu);
@@ -150,7 +146,7 @@ namespace Tokki
                 gengrad_5x5(new coordforgrad((lu.x + ru.x + ld.x + rd.x) / 4, (lu.y + ru.y + ld.y + rd.y) / 4), new coordforgrad((ru.x + rd.x) / 2, (ru.y + rd.y) / 2), new coordforgrad((ld.x + rd.x) / 2, (ld.y + rd.y) / 2), rd);
             }
 
-            //hue_orig_colors_5x5inf.Text += String.Format("no \n");
+           
 
 
         }
@@ -185,11 +181,11 @@ namespace Tokki
                 ky = rand.Next(0, 5);
                 lx = rand.Next(0, 5);
                 ly = rand.Next(0, 5);
-                //arrinf.Text += String.Format("({0} {1}),({2},{3}) \n", kx, ky, lx, ly);
+                
                 if (!((kx == 4) && (ky == 4)) && (!((kx == 0) && (ky == 4))) && (!((kx == 0) && (ky == 0))) && (!((kx == 4) && (ky == 0))) && (!((kx == 2) && (ky == 2))))
                     if (!((lx == 4) && (ly == 4)) && (!((lx == 0) && (ly == 4))) && (!((lx == 0) && (ly == 0))) && (!((lx == 4) && (ly == 0))) && (!((lx == 2) && (ly == 2))))
                     {
-                        //arrinf.Text += "+";
+                       
                         Hcolor temp = hue_game_colors_5x5[kx, ky];
                         hue_game_colors_5x5[kx, ky] = hue_game_colors_5x5[lx, ly];
                         hue_game_colors_5x5[lx, ly] = temp;
@@ -205,12 +201,11 @@ namespace Tokki
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    //hue_orig_colors_5x5[i, j]= tt;
-                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BorderWidth = 0;
+
+                    
                     hue_game_5x5_bottons[i, j].BorderWidth = 0;
                     hue_game_5x5_bottons[i, j].BackgroundColor = Color.FromRgb(hue_game_colors_5x5[i, j].r, hue_game_colors_5x5[i, j].g, hue_game_colors_5x5[i, j].b);
-                    //((Button)FindByName("scolor" + i.ToString() + j.ToString())).BackgroundColor = Color.FromRgb(hue_game_colors_5x5[i, j].r, hue_game_colors_5x5[i, j].g, hue_game_colors_5x5[i, j].b);
-                }
+                     }
 
             }
         }
@@ -238,7 +233,7 @@ namespace Tokki
 
         private void game_hue_5x5_field_Click(object sender, EventArgs e)
         {
-            //scolor00.BackgroundColor = Color.FromRgb(0,0,0); 
+            
 
             ((Button)sender).BorderWidth = 5;
             if (k == 0)
@@ -257,18 +252,16 @@ namespace Tokki
                 hue_game_colors_5x5[(acl.TabIndex) / 10, (acl.TabIndex) % 10] = hue_game_colors_5x5[(bcl.TabIndex) / 10, (bcl.TabIndex) % 10];
                 hue_game_colors_5x5[(bcl.TabIndex) / 10, (bcl.TabIndex) % 10] = temp;
                 showgrad_5x5();
-                //arrinf.Text = String.Format("{0} ", is_hue_completed());
+                
                 if (is_hue_completed_5x5())
 
-                    arrinf.Text = " yes ";
+                    arrinf.Text = " Да ";
 
                 else arrinf.Text = pair_not_right.ToString();
 
 
             }
-            //}
-
-            //game_couple_enable(true);
+           
 
 
         }
@@ -312,6 +305,17 @@ namespace Tokki
                     }
                 }
             }
+        }
+
+        private async void game_hue_5x5_exit_Click(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync(false);
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PopAsync(false);
+            base.OnBackButtonPressed();
+            return false;
         }
     }
 }

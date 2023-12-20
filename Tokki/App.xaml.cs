@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static Tokki.App;
 
 namespace Tokki
 {
@@ -10,8 +11,11 @@ namespace Tokki
         {
             InitializeComponent();
 
+            NavigationPage.SetBackButtonTitle(this, "\u25C3");
             MainPage = new NavigationPage(new MainPage());
+            
         }
+
 
         protected override void OnStart()
         {
@@ -24,5 +28,7 @@ namespace Tokki
         protected override void OnResume()
         {
         }
+
+        
     }
 }

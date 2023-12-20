@@ -1,35 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tokki.Breath_5">
+             x:Class="Tokki.Breath_5"
+             BackgroundImage="background_Tosha.png"
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <RelativeLayout HorizontalOptions="Center" >
-            <Grid HorizontalOptions="FillAndExpand">
-                <Image x:Name="Image_background" HorizontalOptions="Center" VerticalOptions="Center" Source="Tokki.pictures.background_menu_bord.png"/>
-                <StackLayout x:Name="Stack_game_breath_5" IsVisible="true" Margin="0, 30">
-
-                    <!-- <Button Text="Exit" Clicked="game_breath_Click" CornerRadius="10" Margin="10" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" BackgroundColor="#DCDCDC"/>-->
-
-                    <StackLayout>
-                        <Frame  HeightRequest="80" WidthRequest="220" CornerRadius="20" HorizontalOptions="Center">
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                <Label x:Name = "label_Breath_5_min"  Text="05" FontSize="60" TextColor="Black"/>
-                                <Label Text=":" FontSize="60" TextColor="Black"/>
-                                <Label x:Name = "label_Breath_5_sec" Text="00" FontSize="60" TextColor="Black"/>
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HeightRequest="80" WidthRequest="220" Margin="0,10" CornerRadius="20" HorizontalOptions="Center">
-                            <Label x:Name="label_breath" FontSize="60" HorizontalOptions="Center" TextColor="Black"/>
-                        </Frame>
-                        <RelativeLayout HorizontalOptions="Center">
-                            <Button Text="Start" x:Name="Button_Breath_5_start" Clicked="Button_Breath_5_start_Click" CornerRadius="10" WidthRequest="150" HeightRequest="60"  BackgroundColor="#B3E8FF"/>
-                        </RelativeLayout>
-
+           <StackLayout x:Name="Stack_game_breath_5">
+            <ImageButton Source="vykhod.png" HorizontalOptions="Start" Margin="10" CornerRadius="10" HeightRequest="50" WidthRequest="110" Clicked="game_breath_5_Click" BackgroundColor="Transparent"/>
+            <StackLayout  HorizontalOptions="FillAndExpand">
+                <Frame  HeightRequest="80" WidthRequest="220" CornerRadius="20" HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label x:Name = "label_Breath_5_min" VerticalOptions="Center" FontFamily= "Rounds_Black" TextColor="#395582" Text="05" FontSize="50"/>
+                        <Label Text=":" FontSize="50" VerticalOptions="Center" FontFamily= "Rounds_Black" TextColor="#395582"/>
+                        <Label x:Name = "label_Breath_5_sec" VerticalOptions="Center" FontFamily= "Rounds_Black" Text="00" FontSize="50" TextColor="#395582"/>
                     </StackLayout>
+                </Frame>
 
-                </StackLayout>
-            </Grid>
-        </RelativeLayout>
+                <Frame HeightRequest="80" WidthRequest="220" Margin="0,10" CornerRadius="20" HorizontalOptions="Center" >
+                    <Label x:Name="label_breath" FontFamily= "Rounds_Black" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#395582"/>
+                </Frame>
+                <RelativeLayout HorizontalOptions="Center">
+                    <ImageButton x:Name="Button_Breath_5_start" Source="start.png" Clicked="Button_Breath_5_start_Click" CornerRadius="10" WidthRequest="150" HeightRequest="60"  BackgroundColor="Transparent"/>
+                </RelativeLayout>
+                <Image x:Name="Image_breath_5"/>
+
+            </StackLayout>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
